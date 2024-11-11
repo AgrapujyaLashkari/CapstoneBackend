@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URI).then(
 const app = express()
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({origin: "*"}))
+app.use(cors({origin: ["http://localhost:5173"], credentials: true}))
 
 import authRouter from './routes/auth.route.js'
 import noteRouter from './routes/note.route.js'
