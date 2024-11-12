@@ -71,6 +71,7 @@ export const signout = async (req, res, next) => {
       message: "User logged out successfully",
     })
   } catch (error) {
+    console.log("res clear cookie nahi chala")
     next(error)
   }
 }
