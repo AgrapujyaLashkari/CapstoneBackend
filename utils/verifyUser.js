@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken"
 
 export const verifyToken = (req, res, next) => {
   console.log(req)
-  const token = req.cookies.ext_name
+  const token = req.cookies.access_token
   console.log(token)
   console.log(req.cookies)
 
